@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "playfair-display", serif;
+}
+
+body {
+    color: #ededed;
+    background: #0D0D0D;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.logo_gradiant {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(40px);
+    background: linear-gradient(89.96deg, #8000ff99, #b37ce930 38.52%, #d9d9d900);
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.navbar a:hover {
+    color: #d1a9f999;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signature p {
+    margin-top: 15px;
+}
+
+.contact-links {
+    padding-left: 30%;
+    margin-bottom: 10px;
+}
+
+.linkedin-icon {
+    margin-right: 25px;
+}
+
+.mail p {
+    margin-top: 15px;
+    font-family: "Inder", sans-serif;
+}
+
+.mail a {
+    font-family: "Inder", sans-serif;
+    color: #fff;
+}
+
+.home {
+    margin-top: 100px;
+    margin-left: 4%;
+    display: grid;
+    grid-template-columns: repeat(2, .5fr);
+    align-items: center;
+    gap: 1.5px;
+}
+
+.home-text {
+    max-width: 490px;
+    line-height: 1.5;
+    align-self: stretch;
+    position: relative;
+    padding: 25% 0 0 10%;
+}
+
+.home-text h1 {
+    font-size: 35px;
+}
+
+.home-img img {
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.skills {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.figma-logo {
+    display: grid;
+    grid-template-columns: 50px 150px;
+}
+
+
+
+.figma-logo-text {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.figma-logo-text h2 {
+    padding-top: 3px;
+}
+
+.figma-logo-text p {
+    padding-top: 4px;
+    font-family: "Inder", sans-serif;
+}
+
+
+
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
